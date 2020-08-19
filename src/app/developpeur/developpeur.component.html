@@ -1,0 +1,8 @@
+<li class="list-group-item ': true,
+'list-group-item-success': devStatus === 'present',
+'list-group-item-danger': devStatus === 'absent'}">
+  <div style="width:20px;height:20px;background-color:red;"
+       *ngIf="devStatus === 'absent'"></div>
+  <h4 [ngStyle]="{color: getColor()}">dev : {{ devName }} -- Statut : {{ getStatus() }}</h4>
+  <input type="text" class="form-control" [(ngModel)]="devName">
+</li>

@@ -11,7 +11,7 @@ export class AppComponent {
   isAuth = false;
   developpeurs = [
     {
-      name: 'Menad',
+      name: 'Menadoo',
       status: 'present'
     },
     {

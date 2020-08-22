@@ -7,7 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ProjectAngularDev';
-  lastUpdate = new Date();
+  lastUpdate = new Promise((resolve, reject) => {
+    const date = new Date();
+    setTimeout(
+      () => {
+        resolve(date);
+      }, 200
+    );
+  });
   isAuth = false;
   developpeurs = [
     {

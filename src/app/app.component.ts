@@ -7,11 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ProjectAngularDev';
-
+  lastUpdate = new Date();
   isAuth = false;
   developpeurs = [
     {
-      name: 'Menadoo',
+      name: 'Menad',
       status: 'present'
     },
     {

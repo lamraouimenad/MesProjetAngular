@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component , OnInit } from '@angular/core';
+import {DeveloppeurService} from './services/developpeur.service';
 
 @Component({
   selector: 'app-root',
@@ -16,27 +17,20 @@ export class AppComponent {
     );
   });
   isAuth = false;
-  developpeurs = [
-    {
-      name: 'Menad',
-      status: 'present'
-    },
-    {
-      name: 'Salah',
-      status: 'absent'
-    },
-    {
-      name: 'ali',
-      status: 'absent'
-    }
-  ];
-  constructor() {
+  developpeurs: any[];
+  constructor(private developpeurService: DeveloppeurService) {
     setTimeout(
       () => {
         this.isAuth = true;
       }, 4000
     );
   }
+
+  // tslint:disable-next-line:typedef use-lifecycle-interface
+  ngOnInit() {
+    this.developpeurs = this.developpeurService.developpeurs;
+  }
+  // tslint:disable-next-line:typedef
   onAllumer() {
     alert('On allume tout !');
   }

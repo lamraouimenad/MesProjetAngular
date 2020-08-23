@@ -1,4 +1,4 @@
-import { Component,Input,OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-developpeur',
@@ -12,16 +12,19 @@ export class DeveloppeurComponent implements OnInit {
 
   constructor() { }
 
+  // tslint:disable-next-line:typedef
   ngOnInit() {
   }
 
+  // tslint:disable-next-line:typedef
   getStatus() {
     return this.devStatus;
   }
+  // tslint:disable-next-line:typedef
   getColor() {
-    if(this.devStatus === 'present') {
+    if (this.devStatus === 'present') {
       return 'green';
-    } else if(this.devStatus === 'absent') {
+    } else if (this.devStatus === 'absent') {
       return 'red';
     }
   }

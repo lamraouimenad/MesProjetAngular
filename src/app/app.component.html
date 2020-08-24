@@ -3,16 +3,20 @@
 
     <div class="col-xs-12">
       <h2>Mes developpeurs</h2>
-      <p>Mis à jour : {{ lastUpdate | async | date: 'yMMMMEEEEd' | uppercase }}</p>
+      <p>Mis à jour : {{ lastUpdate | async | date: 'y MMMM EEEE d' | uppercase }}</p>
       <ul class="list-group">
         <app-developpeur  *ngFor="let dev of developpeurs"
                           [devName]="dev.name"
                           [devStatus]="dev.status"></app-developpeur>
 
       </ul>
+
       <button class="btn btn-success"
               [disabled]="!isAuth"
-              (click)="onAllumer()">afficher</button>
+              (click)="onPresent()">Tout present</button>
+      <button class="btn btn-danger"
+              [disabled]="!isAuth"
+              (click)="onAbsent()">Tout absent</button>
     </div>
   </div>
 </div>

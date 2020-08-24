@@ -31,7 +31,11 @@ export class AppComponent {
     this.developpeurs = this.developpeurService.developpeurs;
   }
   // tslint:disable-next-line:typedef
-  onAllumer() {
-    alert('On allume tout !');
+  onPresent() {
+    this.developpeurService.switchOnAll();
+  }
+  // tslint:disable-next-line:typedef
+  onAbsent() {
+    this.developpeurService.switchOffAll();
   }
 }
